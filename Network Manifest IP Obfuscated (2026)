@@ -1,0 +1,159 @@
+Yggdrasill - Network Manifest: Infrastructure Only (actualized. See Naming Logic below for planned systems)
+
+I. NETWORKING (Backbone)
+System Name   | IP              | Connection     		  | Hardware / Role									 				| Connected to 	 | Tailscale		 | 	
+Yggdrasill    | 192.168.XXX.1   | Wired 10GbE SFP+/RJ45   | ASUS RT-BE88U (Primary Router)					 				| Outside (Bifrost)
+Laeradr       | 192.168.XXX.2   | Wired 10GbE    		  | ASUS RT-BE88U (AiMesh Node)						 				| Mimameidr
+Mimameidr     | N/A             | Wired 10GbE 			  | TP-Link TL-SX1008 (Backhaul Bridge)				 				| Laeradr
+Valgrind      | N/A             | Wired 1GbE              | TP-Link TL-SG608P (PoE Switch)								 	| Yggdrasill
+Valholl	      | 192.168.XXX.3   | Wired 1GbE    		  | SMLIGHT SLZB-06MG26U (Matter router)						    | Valgrind
+Bilrost       | N/A             | Wired USB 3.2 (10Gbps)  | Galaxy S21 (5G Failover Device)								    | Yggdrasill	 | 100.XXX.XXX.XXX   |
+
+II. IoT DEVICES 
+System Name   | IP              | Connection     		  | Hardware / Role												 	| Connected to 	 | Tailscale		 |	
+Hvergelmir    | 192.168.XXX.50  | Midgardr (2.4G)   	  | Midea Duo 12000 BTU (Air Conditioner)			
+Hofud         | 192.168.XXX.51  | Midgardr (2.4G)   	  | Tapo C260 (Security Camera)
+Gulltoppr     | 192.168.XXX.52  | Midgardr (2.4G)   	  | Tapo C260 (Security Camera)
+Gjallarhorn   | 192.168.XXX.53  | Asgardr (5G)   		  | Reolink D340W (Security Camera/Doorbell)
+Elivigar	  | 192.168.XXX.54  | Midgardr (2.4G)   	  | Midea Duo 50 Pint (Dehumidifier)
+
+III. DESKTOP COMPUTERS
+System Name   | IP ASSIGED      | Connection     		  | Hardware / Role												 	| Connected to 	 | Tailscale		 |
+Odinn         | 192.168.XXX.100 | Wired 5GbE     		  | 9950X / X870E Taichi (Main Compute)							 	| Mimameidr		 | 100.XXX.XXX.XXX	 |
+Heimdallr     | 192.168.XXX.101 | Wired 5GbE     		  | HP EliteDesk 800 G5 (NVR/Home Assistant) 					 	| Mimameidr		 | 100.XXX.XXX.XXX 	 |
+Fulla         | 192.168.XXX.125 | Asgardr (5G)   		  | iMac 27" (Late 2013)							
+
+IV. LAPTOPS
+System Name   | IP ASSIGED      | Connection     		  | Hardware / Role	 											 	| Connected to 	 | Tailscale 		 |
+Thorr         | 192.168.XXX.150 | Asgardr (5G)   		  | XPS 17 9700 (Mobile Compute/Teaching)						 	| 				 | 100.XXX.XXX.XXX	 |
+Frigg         | 192.168.XXX.175 | Asgardr (5G)   		  | MBP 14" (M1 Pro)											 	|				 | 100.XXX.XXX.XXX	 |
+Mac           | 192.168.XXX.176 | Asgardr (5G)   		  | Kara's work computer
+
+V. PRINTERS / PERIPHERALS
+System Name   | IP ASSIGED      | Connection     		  | Hardware / Role													| Connected to 	 | Tailscale		 |
+Saga          | 192.168.XXX.200 | Wired 10/100   		  | Brother MFC-L8850CDW (Color)
+Edda          | 192.168.XXX.201 | Midgardr (2.4G)		  | Brother MFC-8890DW (Mono)
+
+VI. MOBILE DEVICES
+System Name   | IP ASSIGED      | Connection     		  | Hardware / Role												 	| Connected to 	 | Tailscale		 |
+Hermodr       | 192.168.XXX.250 | Asgardr (5G)   		  | Samsung Galaxy S26 Ultra														 | 100.XXX.XXX.XXX	 |	
+
+VII. NON-LOCAL DEVICES
+System Name   | IP ASSIGED      | Connection     		  | Hardware / Role									 				| Connected to 	 | Tailscale		 |
+Skadi    	  | 192.168.XXX.1   | Tailscale		   		  | Raspberry Pi 5 (Office IoT server / access point)				| 				 | 100.XXX.XXX.XXX 	 |
+Thjaziaugu    | 192.168.XXX.50  | Thrymheim (2.4G)	  	  | Waveshare Photopainter 7.3inch E6 (ESP32-Photoframe firmware)	|				 |					 |
+Jarnvithr	  | N/A 		    | Wired 1GbE 			  | Netgear GS108 (Retro Tech Router)								| Skadi			 |					 |
+
+VIII. INACTIVE DEVICES
+System Name   | IP ASSIGED      | Connection     		  | Hardware / Role									 				| Connected to 	 | Tailscale		 |
+Thrymr    	  | 192.168.XXX.51  | Wired 1GbE			  | 2013 Mac Pro (Inactive Machine - retro tech)	 				| Jarnvithr		 | 100.XXX.XXX.XXX 	 |
+Hrungnir      | 192.168.XXX.52  | Wired 10/100 		 	  | Power Mac G4 Cube (Inactive Machine - retro tech)				| Jarnvithr		 | 100.XXX.XXX.XXX	 |
+Alvaldi    	  | 192.168.XXX.53  | Wired 1GBE			  | iMac G4 17 inch Sunflower (Inactive Machine - retro tech)	 	| Jarnvithr		 | 100.XXX.XXX.XXX 	 |
+Ymir		  | N/A 		    | N/A 					  | Commodore 64 (Inactive Machine - retro tech)					|				 | N/A 				 |
+Starkathr	  | N/A 		    | N/A 					  | Commodore 128 (Inactive Machine - retro tech) 					|				 | N/A 				 |
+Bergelmir	  | N/A 		    | N/A 					  | Commodore SX-64 (Inactive Machine - retro tech) 				|				 | N/A 				 |
+Surtr		  | N/A 		    | N/A 					  | Atari Video Computer System (Inactive Machine - retro tech) 	|				 | N/A 				 |
+
+BLUETOOTH NETWORKS
+III.2 - Heimdallr:
+			Vindhlemr - Bluetooth 6.0 Radio
+				Vind - Govee H5075 Hygrometer
+
+
+Network diagram (|,- = wired connection, !,~ = wireless connection):
+
+Bifrost (outside Wan) ---> Yggdrasill ---------> Mimameidr ------> Laeradr
+	|					      |              		|				  !	
+	|					      |              		|---> Heimdallr	  !
+	|					      |            	 		|---> Odinn		  !
+	|					      |										  !
+	|					      |---> Valgrind -----> Valholl			  !
+	|					      |---> Saga               	!			  !
+	|					      !							!			  !
+	|					      !							!~~> Matter	  !
+	|					   	  !										  !
+	|					      !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!~~~~~~~> Midgardr (2.4GHz Wifi)
+	|					    										  !				!
+	|					    										  !				!~~~~~> Hofud
+	|~~~> Skadi ---> Jarnvithr				 						  !				!~~~~~> Gulltoppr
+					   |	   										  !				!~~~~~> Hvergilmir
+					   |---> Thrymr   								  !				!~~~~~> Elivagar
+					   |---> Hrungnir	   							  !				!~~~~~> Edda
+					   |---> Alvaldi	    						  !
+					   !~~~> Thrymheim (2.4Ghz Wifi)	              !~~~~~~~~~~~~~~~~~~~~~~~~~~~> Asgardr (5GHz Wifi)	
+						         !                                     									!
+						         !~~~>Thjaziaugu                       									!~~~~~~> Thorr
+						                                              									!~~~~~~> Fulla
+						                                              									!~~~~~~> Frigg
+						                                              									!~~~~~~> Hermodr
+						                                              									!~~~~~~> Gjallarhorn
+Network Backbone Summary
+Hardware: Dual ASUS RT-BE88U in AiMesh with a 10GbE wired backhaul. A TP-Link TL-SX1008 is between the two units. 
+Logic: High-performance tasks (Photogrammetry/Compute) are partitioned to Asgardr or Wired connections. Legacy and low-priority peripherals are relegated to Midgardr.
+
+Hardware Logic & Constraints
+Odinn Networking [LOCKED]: Onboard Marvell 5GbE is the terminal velocity. PCIe lanes are fully allocated to dual RDNA 4 GPUs (x8/x8). No NIC expansion possible.
+
+Iðavöllr I/O: Connected via Thunderbolt 4. The 2.5GbE port on the CalDigit TS4 is recognized but considered a secondary interface to prevent bus contention with the primary 5GbE link.
+
+IP Segmentation: Distribution is categorized by Device Class: .0 Backbone/Infrastructure, .50 IoT, .100 Desktops, .150 Laptops, .200 Printers, .250 Mobile. 
+
+Infrastructure Note: WAN is capped at 1Gbps/50Mbps. The 10GbE internal backbone (TL-SX1008) exists solely to facilitate the AiMesh backhaul and future-proof internal lateral transfers between Yggdrasill/Laeradr nodes. Likewise, the 1GbE thread exists solely to provide power and data to PoE devices. We have four spare non-PoE slots there if we need them, however.
+
+Naming Logic
+INFRASTRUCTURE
+Yggdrasill: ASUS RT-BE88U (Primary Router) - The network that contains all the machines. Therefore, it is the world tree. The port to the outside is named Bifrost in the router but doesn't really do anything naming wise within the network framework.
+Laeradr: ASUS RT-BE88U (AiMesh Node) - The "crown" of Yggdrasil. It is part of it, but separate, just as the AI node is part of the network but not the primary router.
+Mimameidr: TP-Link TL-SX1008 (Backhaul Bridge) - This is the switch that connects the two RT-BE88U routers. As such, it is part of Yggdrasill even though it does not have a formal IP.
+Valgrind: TP-LInk TL-SG608P (PoE Switch) This switch exists to provide PoE connections to devices that do not have sufficient power otherwise. As such, it is part of Yggdrasill as a network but leads to Valholl
+Valholl: SMLIGHT SLZB-06MG24U (Matter router) - If Bifrost is the connection to the outside world, then Valholl is the connection to the world of IoT devices via Matter. Since these devices lack computational power (soul) and do not have IPs (bodies) they are mapped to the Einherjar. See separate manifest.
+Bilrost: Galaxy S21 - the former Hermodr. It is the connection to the world when the main connection fails. As such, it is the fleeting bridge, not Bifrost.
+
+DESKTOP COMPUTERS
+Odinn: 9950X / X870E Taichi (Main Computer) - This is the most powerful computer on the network. As such, it is the "all-father"
+Heimdallr: HP EliteDesk 800 G5 SFF i7-9700 - This is a Home Assistant/NVR box. As such, it watches the outside world and like Heimdallr serves as a guardian.
+Bragi (POTENTIAL): Potential Jellyfin/File server - This machine is not built out, but since of the two potential names (Bragi and Mimir) Bragi is more associated with the most public-facing aspect of this potential machine that is the name that is chosen. This will be housed in a spare Fractal Design North XL case and utilize a spare 9070 Reaper XT. All else is still potential.
+Fulla: Kara's iMac 27" (Late 2013) - This is Kara's computer. From what I can tell it is primarily a box to watch and listen to videos in the morning while she eats breakfast, but she does use it to pay bills and handle financial tasks for her personal finances.
+
+LAPTOPS
+Thorr: Dell XPS (Mobile Compute) - This is the "Friend of Man", the laptop I take with me out into the world and which serves me when I'm out and about.  As such, Thorr made the most sense.
+Frigg: - This is Kara's computer. It is the primary machine she does work on at home, and is the most powerful computer she owns, although not the most powerful computer on the network. 
+Mac: - This is Kara's work computer. I know nothing about it. It just started appearing on the network.
+
+IoT DEVICES
+Gjallarhorn: Reolink D340W (Front Door) - A smart doorbell with camera. Since it announces visitors, it is Gjallarhorn.
+Hofud: Tapo C260 (back window) - This is a security camera and as such should be named in such a way as to connect to Heimdallr. Thus, Heimdallr's weapon.
+Gulltoppr: Tapo C260 (front window) - This is a security camera and as such should be named in such a way as to connect to Heimdallr. Thus, Heimdallr's horse, with the idea that it's watching the "stable" -- the parking lot.
+Hvergelmir: Midea Duo 12000 BTU - This is an air conditioning unit that is able to be integrated into Home Assistant. As such, there's really no other name that would fit.
+
+PRINTERS:
+Saga: Brother MFC-L8850CDW (Color) - This is the upstairs office printer. It was acquired after Edda, but serves a similar function: to record thoughts as printed items.
+Edda: Brother MFC-8890DW (Mono) - This is the downstairs printer Kara uses. It serves to record thoughts as printed items, and so takes its name from the stories of the Norse.
+
+MOBILE DEVICES:
+Hermodr: Samsung Galaxy S26 Ultra - This connects to the network, but mostly serves as a means to communciate. Thus, Hermodr is the perfect choice. Especially since talking on the phone is hell.
+Kara's Samsung Galaxy S20 FE 5G - she doesn't really use the wifi on the phone, preferring to use the phone data. If she does and we bring her devices into the naming scheme Gná would probably be the best name.
+
+NON-LOCAL DEVICES:
+A: ACTIVE
+Skadi: Raspberry Pi 5(4GB) - The Raspberry Pi is set up with a 32GB microSD card and Ubuntu 26.04 LTS Server. It connects to the network via Tailscale, so it has to be accessed by other machines on my Tailnet. It is a IoT server in my campus office that primarily exists for two purposes: to control usb-based lighting for the Lumibricks sets I have as room decoration and to serve as a place for the ESP32-based epaper weekly calendar to call to to grab the next image for its reprovisioning. It does that over a dedicated 2.4ghz network, Thrymheim, that it serves as the access point for. Since it is not part of Asgardr but does have both compute and memory it has a name of a deity that chose not to live in Asgardr but only came to the gate.
+Thjaziaugu: Waveshare Photopainter, flashed to ESP32-photoframe. It is no longer a thinking machine, really, and shows calendar information. As such, the stars seem appropriate and I named it after the eyes of Thjazi, which were turned into stars. It has an IP when it wakes up, so it needs to have a name.
+Jarnvithr: Netgear GS108 - This is a simple router that lives in the campus office in case I want to bring one of the retro machines online for some reason. It connects to Skadi, making using of its connection to the campus IoT network. 
+
+B: INACTIVE - on display but functional. These machines are primarily display machines, but do maintain the ability to turn on if provided with power and as such if they have network ability they should have a wired connection. In the case of Þrymr they also have a wifi connection, but the connection on Hrungnir and Alvaldi is too old a version of 802.11 to really connect to the campus network. 
+
+Hrungnir: PowerMac G4 Cube (450Mhz, 1.5GB Ram)
+Alvaldi: iMac G4 "Sunflower" (1.25Ghz, 2GB Ram)
+Starkaðr: Commodore 128
+Ymir: Commodore 64
+Bergelmir: Commodore SX-64
+Þrymr: Mac Pro (2.7Ghz, 64GB Ram, D700's)
+Surtr: Atari Video Computer System
+
+
+
+
+
+
+
+
