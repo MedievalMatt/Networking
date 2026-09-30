@@ -27,7 +27,7 @@ IV. LAPTOPS
 System Name   | IP ASSIGED      | Connection     		  | Hardware / Role	 											 	| Connected to 	 | Tailscale 		 |
 Thorr         | 192.168.XXX.150 | Asgardr (5G)   		  | XPS 17 9700 (Mobile Compute/Teaching)						 	| 				 | 100.XXX.XXX.XXX	 |
 Frigg         | 192.168.XXX.175 | Asgardr (5G)   		  | MBP 14" (M1 Pro)											 	|				 | 100.XXX.XXX.XXX	 |
-Mac           | 192.168.XXX.176 | Asgardr (5G)   		  | Kara's work computer
+Mac           | 192.168.XXX.176 | Asgardr (5G)   		  | Spouse's work computer
 
 V. PRINTERS / PERIPHERALS
 System Name   | IP ASSIGED      | Connection     		  | Hardware / Role													| Connected to 	 | Tailscale		 |
